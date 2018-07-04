@@ -49,6 +49,11 @@ html, body {
   float: left;
 }
 
+.MainNavBar__selectedDate {
+  width: 130px;
+  text-align: left;
+}
+
 .clearFloat {
   clear: both;
 }
