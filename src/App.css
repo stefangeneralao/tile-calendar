@@ -72,7 +72,6 @@ html, body {
 .DayTile {
   flex: 1 1 200px;
   padding: 10px;
-  margin: 5px;
   color: white;
   height: 100px;
 }

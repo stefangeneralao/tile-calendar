@@ -1,10 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MainNavBar from '../MainNavBar';
 import DaysContainer from '../DaysContainer';
 
-class Main extends React.Component {
+class Main extends React.PureComponent {
   render() {
-    const { selectedDate, setNextMonth, setPreviousMonth, events } = this.props;
+    const {
+      selectedDate,
+      setNextMonth,
+      setPreviousMonth,
+      events,
+    } = this.props;
     return (
       <div className="Main">
         <MainNavBar
@@ -21,5 +27,12 @@ class Main extends React.Component {
     );
   }
 }
+
+Main.propTypes = {
+  selectedDate: PropTypes.instanceOf(Date).isRequired,
+  setNextMonth: PropTypes.func.isRequired,
+  setPreviousMonth: PropTypes.func.isRequired,
+  events: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
 
 export default Main;
