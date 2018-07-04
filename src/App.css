@@ -64,7 +64,11 @@ html, body {
   margin-right: 10px;
 }
 
-.DayTile {
+.DaysContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: wrap;
+}
+
+.DayTile {
+  flex: 1 1 200px;
 }
