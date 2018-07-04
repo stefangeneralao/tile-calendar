@@ -37,19 +37,20 @@ html, body {
 
 .Main {
   background-color: white;
-  position: absolute;
-  left: 50px;
-  right: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
   padding: 30px;
   box-shadow: 5px 10px 10px #eee;
 }
 
-.MainNavBar__monthSelector,
 .MainNavBar__selectedDate,
 .MainNavBar__prevBtn,
 .MainNavBar__nextBtn {
-  display: block;
   float: left;
+}
+
+.clearFloat {
+  clear: both;
 }
 
 .MainNavBar__prevBtn,
