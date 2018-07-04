@@ -38,7 +38,14 @@ class App extends Component {
           dateEnd: new Date('July 18, 2018, 23:59:59'),
           location: 'Malmö',
           details: 'Öl å sånt',
-        },
+        },{
+          id: uuid(),
+          title: 'Swe vs Eng',
+          dateStart: new Date('July 07, 2018, 17:00:00'),
+          dateEnd: new Date('July 07, 2018, 19:00:00'),
+          location: 'Ryssland',
+          details: 'Fotboll å ölkorv',
+        }
       ]
     }
   }

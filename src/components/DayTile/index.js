@@ -4,7 +4,7 @@ import React from 'react'
 class DayTile extends React.Component {
     render() {
         const { title, dateStart, dateEnd, location, details } = this.props
-        
+
         const monthNames = [
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
           ];
