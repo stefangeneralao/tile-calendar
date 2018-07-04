@@ -1,6 +1,8 @@
 import React from 'react'
 import DayTile from '../DayTile';
 
+const dayTileColors = ['red', 'green', 'blue'];
+
 class DaysContainer extends React.Component {
   render() {
     const { events, selectedDate } = this.props;
@@ -8,7 +10,7 @@ class DaysContainer extends React.Component {
       selectedDate.getMonth() === event.dateStart.getMonth() &&
       selectedDate.getYear() === event.dateStart.getYear()
     ));
-    const filteredDayTiles = filteredEvents.map(event => {
+    const filteredDayTiles = filteredEvents.map((event, i) => {
       const { id, title, dateStart, dateEnd, location, details } = event;
       return (
         <DayTile
@@ -18,6 +20,7 @@ class DaysContainer extends React.Component {
           dateEnd={dateEnd}
           location={location}
           details={details}
+          color={dayTileColors[i]}
         />
       )
     });
