@@ -1,10 +1,23 @@
 import React from 'react'
 
-
 class DayTile extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {isHovered: false};
+    }
+
+    onHoverHandler = () => {
+        this.setState({isHovered: true});
+    }
+
+    onBlurHandler = () => {
+        this.setState({isHovered: false});
+    }
+    
     render() {
         const { title, dateStart, dateEnd, location, details } = this.props
-
+        
         const monthNames = [
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
           ];
@@ -40,13 +53,29 @@ class DayTile extends React.Component {
             )
         }
 
-        return (
-            <div className='DayTile'>
-            <div className='DayTile__Date'>{date}</div>
-            <div className='DayTile__Title'>{title}</div>
-            <div className='DayTile__Time'>{time}</div>
-            <div className='DayTile__Location'>Location: {location}</div>
+        const colors = ['red', 'green', 'blue'];
+        let dayTileClassName = 'DayTile ';
+        dayTileClassName += colors[Math.floor(Math.random() * colors.length)];
+        console.log(dayTileClassName);
 
+        let children;
+        if(this.state.isHovered) {
+            children = (
+                <div>{details}</div>
+            );
+        } else {
+            children = (
+                <div>
+                    <div className='DayTile__Date'>{date}</div>
+                    <div className='DayTile__Title'>{title}</div>
+                    <div className='DayTile__Time'>{time}</div>
+                    <div className='DayTile__Location'>Location: {location}</div>
+                </div>
+            );
+        }
+        return (
+            <div className={dayTileClassName} onMouseEnter={this.onHoverHandler} onMouseLeave={this.onBlurHandler}>
+                {children}
             </div>
         )
     }
