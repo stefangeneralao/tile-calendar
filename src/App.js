@@ -9,22 +9,20 @@ class App extends Component {
     const currentDate = new Date();
     this.state = {
       selectedDate: currentDate,
-      events: {
-        '150317-biubi': {
+      events: [{
           title: 'PNW Camping trip',
           dateStart: new Date('March 17, 2015 10:00:00'),
           dateEnd: new Date('April 21, 2015 23:00:00'),
           location: 'Norra vallgatan 105',
           details: 'Detaljer om skrrrrrrrtttt boom'
-        },
-        '150414-oioj': {
+        },{
           title: 'Cricket world cup',
           dateStart: new Date('April 14, 2015 11:00:00'),
           dateEnd: new Date('April 14, 2015 13:00:00'),
           location: 'Melbourne',
           details: 'Fat cricket mate'
         },
-      }
+      ]
     }
   }
 
