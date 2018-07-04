@@ -12,7 +12,11 @@ class Main extends React.Component {
           setNextMonth={setNextMonth}
           setPreviousMonth={setPreviousMonth}
         />
-        <DaysContainer events={events} />
+        <div className="clearFloat" />
+        <DaysContainer
+          events={events}
+          selectedDate={selectedDate}
+        />
       </div>
     );
   }
