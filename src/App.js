@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
+import uuid from 'uuid/v4';
 
 class App extends Component {
   constructor() {
@@ -14,13 +15,15 @@ class App extends Component {
           dateStart: new Date('March 17, 2015 10:00:00'),
           dateEnd: new Date('April 21, 2015 23:00:00'),
           location: 'Norra vallgatan 105',
-          details: 'Detaljer om skrrrrrrrtttt boom'
+          details: 'Detaljer om skrrrrrrrtttt boom',
+          id: uuid(),
         },{
           title: 'Cricket world cup',
           dateStart: new Date('April 14, 2015 11:00:00'),
           dateEnd: new Date('April 14, 2015 13:00:00'),
           location: 'Melbourne',
-          details: 'Fat cricket mate'
+          details: 'Fat cricket mate',
+          id: uuid(),
         },
       ]
     }
