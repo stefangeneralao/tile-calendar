@@ -19,7 +19,7 @@ class DayTile extends React.Component {
         } else {
             date = (
                 <div>
-                    {dateStart.getDate() + '-' + dateEnd.getDate()}
+                    {dateStart.getDate() + ' ' + monthNames[dateStart.getMonth()] + ' - ' + dateEnd.getDate() + ' ' + monthNames[dateEnd.getMonth()]}
                 </div>
             );
         }
@@ -42,10 +42,10 @@ class DayTile extends React.Component {
 
         return (
             <div className='DayTile'>
-            {date}<br/>
-            {title}<br/>
-            {time}<br/>
-            Location: {location}
+            <div className='DayTile__Date'>{date}</div>
+            <div className='DayTile__Title'>{title}</div>
+            <div className='DayTile__Time'>{time}</div>
+            <div className='DayTile__Location'>Location: {location}</div>
 
             </div>
         )
