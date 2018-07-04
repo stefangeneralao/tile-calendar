@@ -58,3 +58,8 @@ html, body {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.DayTile {
+  display: flex;
+  flex-wrap: wrap;
+}
