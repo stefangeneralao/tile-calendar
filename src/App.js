@@ -11,19 +11,33 @@ class App extends Component {
     this.state = {
       selectedDate: currentDate,
       events: [{
+          id: uuid(),
           title: 'PNW Camping trip',
-          dateStart: new Date('March 17, 2015 10:00:00'),
-          dateEnd: new Date('April 21, 2015 23:00:00'),
+          dateStart: new Date('March 17, 2018 10:00:00'),
+          dateEnd: new Date('April 21, 2018 23:00:00'),
           location: 'Norra vallgatan 105',
           details: 'Detaljer om skrrrrrrrtttt boom',
-          id: uuid(),
         },{
+          id: uuid(),
           title: 'Cricket world cup',
-          dateStart: new Date('April 14, 2015 11:00:00'),
-          dateEnd: new Date('April 14, 2015 13:00:00'),
+          dateStart: new Date('April 14, 2018 11:00:00'),
+          dateEnd: new Date('April 14, 2018 13:00:00'),
           location: 'Melbourne',
           details: 'Fat cricket mate',
+        },{
           id: uuid(),
+          title: 'Stefan födelsedag',
+          dateStart: new Date('July 12, 2018, 00:00:00'),
+          dateEnd: new Date('July 12, 2018, 23:59:59'),
+          location: 'Malmö',
+          details: 'He get to skrrrt when he want'
+        },{
+          id: uuid(),
+          title: 'Öl',
+          dateStart: new Date('July 18, 2018, 00:00:00'),
+          dateEnd: new Date('July 18, 2018, 23:59:59'),
+          location: 'Malmö',
+          details: 'Öl å sånt',
         },
       ]
     }
