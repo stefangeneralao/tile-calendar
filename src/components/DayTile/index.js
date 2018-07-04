@@ -16,7 +16,7 @@ class DayTile extends React.Component {
     }
     
     render() {
-        const { title, dateStart, dateEnd, location, details } = this.props
+        const { title, dateStart, dateEnd, location, details, color } = this.props
         
         const monthNames = [
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
@@ -53,11 +53,8 @@ class DayTile extends React.Component {
             )
         }
 
-        const colors = ['red', 'green', 'blue'];
-        let dayTileClassName = 'DayTile ';
-        dayTileClassName += colors[Math.floor(Math.random() * colors.length)];
-        console.log(dayTileClassName);
-
+        let dayTileClassName = 'DayTile ' + color;
+        
         let children;
         if(this.state.isHovered) {
             children = (
